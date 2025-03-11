@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let option = document.createElement("option");
         option.value = country;
         option.textContent = country;
+        if (country === "United States") option.selected = true; // Set India as default
         selectElement.appendChild(option);
     });
 
@@ -22,8 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
         let option = document.createElement("option");
         option.value = country;
         option.textContent = country;
+        if (country === "India") option.selected = true; // Set India as default
         selectElementto.appendChild(option);
     });
+
 
 });
 
@@ -46,13 +49,6 @@ document.getElementById("select_to").addEventListener("change", function () {
 
 document.getElementById("select_from").addEventListener("change", function () {
 
-    if(!countryCode[this.value] )
-    {
-        document.getElementById("fromflag").src = null;
-        return;
-    }
-
-
     document.getElementById("fromflag").src = countryCode[this.value]["flag"] ;
 
 });
@@ -69,11 +65,7 @@ function findexchange(event)
     let selectedToCurrency = document.getElementById("select_to").value;
     let selectedfromCurrency = document.getElementById("select_from").value;
 
-    if (!selectedToCurrency || !selectedfromCurrency) {
-        alert("Select properly");
-        return;
-    }
-    
+   
 
     const selectfrom = countryCode[selectedfromCurrency]["currency"];
     const selectto = countryCode[selectedToCurrency]["currency"];
