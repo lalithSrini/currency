@@ -8,10 +8,11 @@
     <link rel="icon" type="image/png" href="Group 1.png">
     
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="gpt.css"> -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     
@@ -29,22 +30,29 @@
                 <div class="from">
                    
                     <p>From</p>
+
+                    <img id="fromflag"  src="https://flagsapi.com/US/flat/64.png\">
+                    <!-- <select id="select_from" name="FROM">    
+                    </select> -->
             
-                    <img id="fromflag"  src="https://flagsapi.com/US/flat/64.png">
-                    <select id="select_from" name="FROM">
-                    </select>
-            
+                    <input list="countryList" id="select_from" placeholder="Type to search..."value="United States">
+                    <datalist id="countryList"></datalist>
                 </div>
-        
+
+              
+
                 <img id="img" src="arrow.png">
                 
                 <div class="to">
         
                     <p>TO</p>
             
-                    <img id="toflag" src="https://flagsapi.com/IN/flat/64.png" >
-                    <select id="select_to" name="TO">
-                    </select>
+                    <img id="toflag" src="https://flagsapi.com/IN/flat/64.png\" >
+                    <!-- <select id="select_to" name="TO">
+                    </select> -->
+
+                    <input list="countryList" id="select_to" placeholder="Type to search..."value="India">
+                    <datalist id="countryList"></datalist>
                     
                 </div>    
             </div>
@@ -60,9 +68,13 @@
         </div>
     
     </div>
-    
+
  
     <script src="country.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
+

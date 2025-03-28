@@ -1,31 +1,41 @@
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
-    const countries = Object.keys(countryCode);
 
 
-    const selectElement = document.getElementById("select_from");
+    // const countries = Object.keys(countryCode);
+    // const selectElement = document.getElementById("select_from");
 
-    countries.forEach(country => {
-        let option = document.createElement("option");
-        option.value = country;
-        option.textContent = country;
-        if (country === "United States") option.selected = true; // Set India as default
-        selectElement.appendChild(option);
+    // countries.forEach(country => {
+    //     let option = document.createElement("option");
+    //     option.value = country;
+    //     option.textContent = country;
+    //     if (country === "United States") option.selected = true; // Set India as default
+    //     selectElement.appendChild(option);
+    // });
+
+
+    const countryList = document.getElementById("countryList");
+
+
+    Object.keys(countryCode).forEach(country => {
+      let option = document.createElement("option");
+      option.value = country; 
+      countryList.appendChild(option);
     });
 
 
     
-    const selectElementto = document.getElementById("select_to");
+    // const selectElementto = document.getElementById("select_to");
 
-    countries.forEach(country => {
-        let option = document.createElement("option");
-        option.value = country;
-        option.textContent = country;
-        if (country === "India") option.selected = true; // Set India as default
-        selectElementto.appendChild(option);
-    });
+    // countries.forEach(country => {
+    //     let option = document.createElement("option");
+    //     option.value = country;
+    //     option.textContent = country;
+    //     if (country === "India") option.selected = true; // Set India as default
+    //     selectElementto.appendChild(option);
+    // });
+
+
 
 
 });
